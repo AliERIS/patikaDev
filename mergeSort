@@ -1,0 +1,28 @@
+ÖDEV
+
+Proje 2
+[16,21,11,8,12,22] -> Merge Sort
+
+Yukarıdaki dizinin sort türüne göre aşamalarını yazınız.
+Big-O gösterimini yazınız.
+
+ÇÖZÜM
+
+16,21,11,8,12,22              Merge Sort sıralaması yaparken önce diziyi 2 ye parçalıyor
+
+16,21,11    8,12,22           2'ye bölünen parçaları da 2 ye bölüyor
+
+16,21   11    8,12    22      Bölünen parçaları da 2 ye bölüyoruz
+
+16  21   11     8   12     22 Ta ki tüm elemanlar tek parça olana kadar
+ \  /           \  / 
+16,21 11        8,12  22      Tek parçaları hangisinin büyük olduğuna göre sıralıyoruz 16 ve 21 16,21 şeklinde sıralanıyor 11 i daha sonra ekleyeceğiz
+ \     /         \     /      8 ve 12 8,12 şeklinde sıralanıyor 22'yi daha sonra ekleyeceğiz
+  \   /           \   /           
+11,16,21         8,12,22      16,21 i 11 ile kıyaslamam gerekiyor 16 11 den büyükmü evet 11,16,21 olarak sıralanıyor 8,12 ile 22 yi kıyaslıyorum, 
+    \              /          8 22 den büyük mü hayır 12 22 den büyük mü hayır o halde sonuna ekliyorum
+     \            /             
+   8,11,12,16,21,22           11 mi küçük 8 mi en küçük diye bakıyorum ve 8 küçük şimdi 11 mi küçük 12 mi diye bakıyorum 11 küçük (8,11) 16 mı 12 mi
+                              küçük (8,11,12) 16 mı 22 mi daha küçük (8,11,12,16) 21 mi 22 mi daha küçük (8,11,12,16,21) ve geriye 22 kalıyor (8,11,12,16,21)
+                              
+                              Big-o notation --> O(logn/log2*n)    
